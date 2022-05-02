@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+$headerColor: #393956;
+$hoverColor: #fce0e0;
+$traceColor: #fdfdfd;
+$titlesColor: #fdfdfd;
+$bgColor: #6C6C9D;
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background: #6C6C9D;
+}
+
+// HEADER 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+a {
+    color: $traceColor;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+#logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $headerColor;
+}
+
+.leftItens {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+
+.menu a {
+    display: block;
+    padding: 0.5rem;
+    color: #fdfdfd;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        right: 0px;
+        background: #2D283D;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active .menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+        background: #2D283D;
+    }
+
+    .menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid #fdfdfd;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: #fdfdfd;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+// FIM DO HEADER 
+
+// SOBRE MIM
+.aboutMe {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background: $bgColor;
+
+    .centerMe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h4 {
+        margin-bottom: 0px;
+        font-size: 80px;
+        color: #fdfdfd;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+            margin-top: 120px;
+            text-align: center;
+        }
+    }
+
+    p {
+        border-bottom: 1px solid $traceColor;
+        padding-bottom: 30px;
+        color: #ffffffe8;
+        width: 80%;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @media screen and (max-width:768px) {
+            font-size: 19px;
+        }
+    }
+}
+
+// FIM DO SOBRE MIM 
+
+// PROJETOS
+.projectsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid white;
+    background: $bgColor;
+
+    h4 {
+        font-size: 80px;
+        color: $titlesColor;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+            align-items: flex-start;
+            padding: 0;
+        }
+    }
+
+    .cardContainer {
+        background: #fffefeb2;
+        padding: 20px;
+        width: 70%;
+        margin-bottom: 30px;
+        gap: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            display: block;
+        }
+
+        .projectsImg {
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .projectDescription {
+            color: #0c0c0c;
+            font-size: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 30px;
+                color: #0c0c0c;
+            }
+            p {
+                font-size: 20px;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(17, 17, 17);
+                transition: 0.5s;
+                gap: 10px;
+                display: flex;
+                align-items: end;
+
+                svg {
+                    width: 20px;
+                }
+            }
+
+            a:hover {
+                color: $bgColor;
+            }
+        }
+    }
+}
+
+// FIM PROJETOS
+
+// CONTATOS
+.contacts {
+    .contactsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        background: $bgColor;
+
+        h4 {
+            margin-top: 65px;
+            margin-bottom: 0px;
+            font-size: 60px;
+            color: $titlesColor;
+
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+            }
+        }
+
+        .svgs {
+            display: flex;
+            gap: 20px;
+
+            svg {
+                @media screen and (max-width: 768px) {
+                    width: 55px;
+                    height: 45px;
+                }
+            }
+
+            border-bottom: 1px solid white;
+
+        }
+    }
+}
+
+// FIM CONTATOS
+
+.footer {
+    background: $bgColor;
+    color: $traceColor;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
