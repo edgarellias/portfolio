@@ -4,14 +4,15 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Urbanist", sans-serif;
   background: #6C6C9D;
+  line-height: 1.5;
 }
 
 a {
   color: #fdfdfd;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Martel Sans", sans-serif;
 }
 
 #logo {
@@ -30,7 +31,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #393956;
+  background: #27323f;
 }
 
 .leftItens {
@@ -79,7 +80,7 @@ header img {
     height: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
-    background: #2D283D;
+    background: #27323f;
   }
 
   .menu a {
@@ -132,7 +133,7 @@ header img {
 .aboutMe {
   background-repeat: no-repeat;
   background-size: 100%;
-  background: #6C6C9D;
+  background: #38485B;
 }
 .aboutMe .centerMe {
   width: 100%;
@@ -175,7 +176,7 @@ header img {
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid white;
-  background: #6C6C9D;
+  background: #38485B;
 }
 .projectsContainer h4 {
   font-size: 80px;
@@ -190,7 +191,7 @@ header img {
   }
 }
 .projectsContainer .cardContainer {
-  background: rgba(255, 254, 254, 0.6980392157);
+  background: #8197b1;
   padding: 20px;
   width: 70%;
   margin-bottom: 30px;
@@ -198,6 +199,7 @@ header img {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 2fr 3fr;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 @media screen and (max-width: 768px) {
   .projectsContainer .cardContainer {
@@ -230,13 +232,13 @@ header img {
   transition: 0.5s;
   gap: 10px;
   display: flex;
-  align-items: end;
+  align-items: center;
 }
 .projectsContainer .cardContainer .projectDescription a svg {
   width: 20px;
 }
 .projectsContainer .cardContainer .projectDescription a:hover {
-  color: #6C6C9D;
+  color: #38485B;
 }
 
 .contacts .contactsContainer {
@@ -245,7 +247,7 @@ header img {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  background: #6C6C9D;
+  background: #38485B;
 }
 .contacts .contactsContainer h4 {
   margin-top: 65px;
@@ -275,7 +277,7 @@ header img {
 }
 
 .footer {
-  background: #6C6C9D;
+  background: #38485B;
   color: #fdfdfd;
   display: flex;
   justify-content: center;

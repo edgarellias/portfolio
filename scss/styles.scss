@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-$headerColor: #393956;
+$headerColor: #27323f;
 $hoverColor: #fce0e0;
 $traceColor: #fdfdfd;
 $titlesColor: #fdfdfd;
-$bgColor: #6C6C9D;
+$bgColor: #38485B;
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     background: #6C6C9D;
+    line-height: 1.5;
 }
 
 // HEADER 
@@ -19,7 +20,7 @@ body {
 a {
     color: $traceColor;
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Martel Sans", sans-serif;
 }
 
 #logo {
@@ -89,7 +90,7 @@ header img {
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
-        background: #2D283D;
+        background: $headerColor;
     }
 
     .menu a {
@@ -208,7 +209,7 @@ header img {
     }
 
     .cardContainer {
-        background: #fffefeb2;
+        background: #8197b1;
         padding: 20px;
         width: 70%;
         margin-bottom: 30px;
@@ -216,6 +217,7 @@ header img {
         border-radius: 10px;
         display: grid;
         grid-template-columns: 2fr 3fr;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
         @media screen and (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -250,7 +252,7 @@ header img {
                 transition: 0.5s;
                 gap: 10px;
                 display: flex;
-                align-items: end;
+                align-items: center;
 
                 svg {
                     width: 20px;
